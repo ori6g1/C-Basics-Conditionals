@@ -72,6 +72,7 @@ int numberEight = int.Parse(Console.ReadLine());
 int numberNine = int.Parse(Console.ReadLine());
 int numberTen = int.Parse(Console.ReadLine());
 
+//Since we did not study arrays and loops I did it like this. Otherwise I would have used them
 if (numberOne > 0)
     sum += numberOne;
 else if (numberOne < 0)
