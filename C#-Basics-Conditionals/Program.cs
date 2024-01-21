@@ -61,11 +61,11 @@ int firstConditionalNumber = 4, secondConditionalNumber = 5, thirdConditionalNum
 
 Console.Write("The three numbers are " + firstConditionalNumber + ", " + secondConditionalNumber + ", " + thirdConditionalNumber + ". ");
 if (firstConditionalNumber > secondConditionalNumber && firstConditionalNumber > thirdConditionalNumber) 
-    Console.WriteLine("Among the three numbers, " + firstConditionalNumber + " is the largest.");
+    Console.WriteLine("Among the three numbers, " + firstConditionalNumber + messageEnd);
 else if (secondConditionalNumber > thirdConditionalNumber) 
-    Console.WriteLine("Among the three numbers, " + secondConditionalNumber + " is the largest.");
+    Console.WriteLine("Among the three numbers, " + secondConditionalNumber + messageEnd);
 else 
-    Console.WriteLine("Among the three numbers, " + thirdConditionalNumber + " is the largest.");
+    Console.WriteLine("Among the three numbers, " + thirdConditionalNumber + messageEnd);
 Console.WriteLine(lineBreak);
 
 //5
