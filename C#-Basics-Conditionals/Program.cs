@@ -31,6 +31,7 @@ Console.WriteLine(lineBreak);
 
 //3
 messageStart = "The age group of ";
+Console.Write("Enter an age: ");
 int age = Convert.ToInt32(Console.ReadLine());
 
 if (age >= 0 && age <= 2) 
@@ -58,7 +59,7 @@ messageStart = "Among the three numbers, ";
 messageEnd = " is the largest.";
 int firstConditionalNumber = 4, secondConditionalNumber = 5, thirdConditionalNumber = 6;
 
-Console.Write("The three numbers are " + firstConditionalNumber + ", " + secondConditionalNumber + ", " + firstConditionalNumber + ". ");
+Console.Write("The three numbers are " + firstConditionalNumber + ", " + secondConditionalNumber + ", " + thirdConditionalNumber + ". ");
 if (firstConditionalNumber > secondConditionalNumber && firstConditionalNumber > thirdConditionalNumber) 
     Console.WriteLine("Among the three numbers, " + firstConditionalNumber + " is the largest.");
 else if (secondConditionalNumber > thirdConditionalNumber) 
@@ -85,3 +86,96 @@ Console.WriteLine(lineBreak);
  * 5 (3, -4) x > 3 || y != -4 : False
  * 6 (-12, -42) !(!(x >= -12) || !(y < -100)) : False
  */
+
+// C Class Work - Switch Case
+//1
+Console.Write("Please enter a race: ");
+string race = Console.ReadLine();
+
+Console.Write("The race '" + race + "' can be the following class:");
+switch(race)
+{
+    case "protean":
+        Console.WriteLine(" vanguard.");
+        break;
+    case "human":
+        Console.WriteLine(" fighter.");
+        break;
+    case "efreet":
+        Console.WriteLine(" mage.");
+        break;
+    default:
+        Console.WriteLine(" assassin.");
+        break;
+}
+Console.WriteLine(lineBreak);
+
+//2
+Console.Write("Please enter an age group: ");
+string ageGroup = Console.ReadLine();
+
+Console.Write("The age group '" + ageGroup + "' is of the following generation:");
+switch (ageGroup)
+{
+    case "infant":
+    case "child":
+        Console.WriteLine(" Generation Alpha.");
+        break;
+    case "adolescent":
+    case "young adult":
+        Console.WriteLine(" Generation Z.");
+        break;
+    case "adult":
+        Console.WriteLine(" Generation Y.");
+        break;
+    case "middle age":
+        Console.WriteLine(" Generation x.");
+        break;
+    case "old":
+        Console.WriteLine(" Baby Boomers.");
+        break;
+    default:
+        Console.WriteLine(" Silnet Generation or older.");
+        break;
+}
+Console.WriteLine(lineBreak);
+
+//D Conditionals
+//1
+bool flipBoolean = true;
+flipBoolean = !flipBoolean;
+
+Console.WriteLine("The boolean used to be " + !flipBoolean + " but now it is " + flipBoolean + ".");
+Console.WriteLine(lineBreak);
+
+//2
+int firstTerm = 10, secondTerm = 98;
+messageStart = "The addition of " + firstTerm + " and " + secondTerm + " is ";
+
+if (100 <= firstTerm + secondTerm)
+    Console.WriteLine(messageStart + "more than 100.");
+else
+    Console.WriteLine(messageStart + "less than 100.");
+Console.WriteLine(lineBreak);
+
+//3
+Console.Write("Please enter the gamble's probability: ");
+float gambleProbability = float.Parse(Console.ReadLine());
+
+Console.Write("Please enter the gamble's prize: ");
+int gamblePrize = int.Parse(Console.ReadLine());
+
+Console.Write("Please enter the gamble's down payment: ");
+int gambleDownPayment = int.Parse(Console.ReadLine());
+
+messageStart = "The gamble is ";
+
+if (gambleDownPayment > (gambleProbability * gamblePrize))
+    Console.WriteLine(messageStart + "not profitable.");
+else if (gambleDownPayment < (gambleProbability * gamblePrize))
+    Console.WriteLine(messageStart + "profitable.");
+else
+    Console.WriteLine(messageStart + "even.");
+Console.WriteLine(lineBreak);
+
+//E - 
