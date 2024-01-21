@@ -176,6 +176,53 @@ else if (gambleDownPayment < (gambleProbability * gamblePrize))
     Console.WriteLine(messageStart + "profitable.");
 else
     Console.WriteLine(messageStart + "even.");
-Console.WriteLine(lineBreak);
+Console.WriteLine(lineBreak + lineBreak);
 
-//E - 
+//E Conditionals: Text Adventure
+string descisionPrompt = "\tWhat would you like to do?";
+int firstDecision, secondDecision;
+string firstOption = "\t1. ", secondOption = "\t2. ", thirdOption = "\t3. ";
+
+Console.WriteLine("You wake up, slowly opening your eyes to the view of a barely lit up room." + lineBreak + 
+    "Only a single window shine a faint sun ray into the dreary room." + lineBreak + 
+    "You are free to do what you want in the room." + lineBreak + descisionPrompt + lineBreak +
+    firstOption + "Search for clues around the room" + lineBreak +
+    secondOption + "Look outside of the small window" + lineBreak +
+    thirdOption + "Try to speak to see if someone answers");
+firstDecision = int.Parse(Console.ReadLine());
+
+switch (firstDecision)
+{
+    case 1:
+        Console.WriteLine("You look around the room and realize that you are in a prison cell." + lineBreak +
+            "You have no recolection how you got here, or why you might be in prison to begin with." + lineBreak +
+            "Lifting the mattress on the bed on which you slept, you see a small key." + lineBreak + descisionPrompt + lineBreak +
+            firstOption + "Attempt to unlock the door to the prison cell" + lineBreak +
+            secondOption + "Search for a secret lock inside the room" + lineBreak +
+            thirdOption + "Try to speak to see if someone answers");
+        secondDecision = int.Parse(Console.ReadLine());
+        break;
+    case 2:
+        Console.WriteLine("You look outisde the window and see a wide open field." + lineBreak +
+            "There seems to be nothing but grass for miles and miles." + lineBreak +
+            "It seems that the building is on a hill and that there is no one in sight." + lineBreak + descisionPrompt + lineBreak +
+            firstOption + "Jump through the window to the field" + lineBreak +
+            secondOption + "Soak in the sparse sun for another minute" + lineBreak +
+            thirdOption + "Sit in a dark corner and cry that you are not outside");
+        secondDecision = int.Parse(Console.ReadLine());
+        break;
+    case 3:
+        Console.WriteLine("You shout out, asking if any one hears you." + lineBreak +
+            "At first it seems that there is no answer, only silence and your thundering echo." + lineBreak +
+            "Then a shriveling voice sqeaks, leting you know they exists. A small white mouse is sitting next to you." + lineBreak + descisionPrompt + lineBreak +
+            firstOption + "Ask it for its name" + lineBreak +
+            secondOption + "Shoo it away" + lineBreak +
+            thirdOption + "Ignore the mouse altogether");
+        secondDecision = int.Parse(Console.ReadLine());
+        break;
+    default:
+        Console.WriteLine("Invalid choice, terminating game");
+        break;
+}
+Console.WriteLine("The continuation of the story arrives with the next update.");
+Console.WriteLine(lineBreak);
